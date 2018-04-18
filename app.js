@@ -4,11 +4,17 @@
 /*jshint -W030*/
 /*jshint -W083*/
 
-const { timer } = require("./controllers");
+const {
+   timer
+} = require("./controllers");
 
 const main = () => {
-  const seconds = parseInt(process.argv[2]) || 10;
-  timer(seconds);
+   const seconds = parseInt(process.argv[2]) || 10;
+   timer(seconds)
+      .then(success => {
+         displayCountdown;
+      })
+      .catch(error => {});
 };
 
 main();
