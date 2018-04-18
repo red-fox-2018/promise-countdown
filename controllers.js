@@ -10,12 +10,16 @@ const timer = seconds =>
       const secondsLeft = Math.floor((then - Date.now()) / 1000);
       if (secondsLeft < 0) {
         clearInterval();
-        resolve();
+        resolve(process.exit());
       } else {
         displayCountdown(secondsLeft);
       }
     }, 1000);
   });
+
+
+
+
 
 module.exports = {
   timer
