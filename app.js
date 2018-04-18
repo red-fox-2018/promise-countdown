@@ -12,7 +12,7 @@ const main = () => {
    const seconds = parseInt(process.argv[2]) || 10;
    timer(seconds)
       .then(success => {
-         displayCountdown;
+         process.exit();
       })
       .catch(error => {});
 };
