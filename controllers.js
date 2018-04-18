@@ -17,6 +17,12 @@ const timer = seconds =>
     }, 1000);
   });
 
+
+module.exports = {
+  timer
+};
+
+
 module.exports = {
   timer
 };
