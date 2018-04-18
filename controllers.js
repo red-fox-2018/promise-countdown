@@ -1,10 +1,10 @@
 const { displayCountdown } = require("./views");
+const app = require('./app')
 
-const timer = seconds =>
+const timer = seconds => {
   new Promise((resolve, reject) => {
     const now = Date.now();
     const then = now + seconds * 1000;
-
     displayCountdown(seconds - 1);
     setInterval(() => {
       const secondsLeft = Math.floor((then - Date.now()) / 1000);
@@ -16,6 +16,7 @@ const timer = seconds =>
       }
     }, 1000);
   });
+}
 
 module.exports = {
   timer
