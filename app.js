@@ -1,8 +1,15 @@
 const { timer } = require("./controllers");
 
 const main = () => {
-  const seconds = parseInt(process.argv[2]) || 10;
+  let seconds = parseInt(process.argv[2]) || 10;
   // Your code here...
+  timer(seconds)
+  .then(resolve =>{
+    resolve()
+  })
+  .catch(reject => {
+    console.log(reject);
+  })
 };
 
 main();
