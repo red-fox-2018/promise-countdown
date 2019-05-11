@@ -1,4 +1,13 @@
-const { displayCountdown } = require("./views");
+/*jshint esversion:6*/
+/*jshint -W097*/
+/*jshint -W117*/
+/*jshint -W030*/
+/*jshint -W083*/
+
+
+const {
+   displayCountdown
+} = require("./views");
 
 const timer = seconds =>
   new Promise((resolve, reject) => {
@@ -18,5 +27,5 @@ const timer = seconds =>
   });
 
 module.exports = {
-  timer
+   timer
 };
